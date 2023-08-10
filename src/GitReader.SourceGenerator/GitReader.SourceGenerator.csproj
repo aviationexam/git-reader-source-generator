@@ -8,14 +8,13 @@
     <ProjectName>GitReader.Generator</ProjectName>
     <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
     <DisableImplicitNuGetFallbackFolder>true</DisableImplicitNuGetFallbackFolder>
+    <IsPackable>true</IsPackable>
   </PropertyGroup>
 
   <Import Project="..\WarningConfiguration.targets" />
 
   <PropertyGroup Label="NuGet">
     <DevelopmentDependency>true</DevelopmentDependency>
-    <IncludeBuildOutput>false</IncludeBuildOutput>
-    <IncludeSymbols>false</IncludeSymbols>
   </PropertyGroup>
 
   <ItemGroup>
