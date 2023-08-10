@@ -4,7 +4,6 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>11.0</LangVersion>
     <Nullable>enable</Nullable>
-    <PackageLicense>MIT</PackageLicense>
     <ProjectName>GitReader.Generator</ProjectName>
     <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
     <DisableImplicitNuGetFallbackFolder>true</DisableImplicitNuGetFallbackFolder>
@@ -14,19 +13,35 @@
   <Import Project="..\WarningConfiguration.targets" />
 
   <PropertyGroup Label="NuGet">
+    <PackageLicense>MIT</PackageLicense>
     <DevelopmentDependency>true</DevelopmentDependency>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
     <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
     <None Include="$(AssemblyName).props" Pack="true" PackagePath="build" />
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" Visible="false"/>
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.6.0" PrivateAssets="all" />
-    <PackageReference Include="GitReader" Version="1.2.0" />
-    <PackageReference Include="H.Generators.Extensions" Version="1.15.1"  PrivateAssets="all" />
+    <PackageReference Include="GitReader" Version="1.2.0" PrivateAssets="all" GeneratePathProperty="true" />
+    <PackageReference Include="H.Generators.Extensions" Version="1.15.1" PrivateAssets="all" GeneratePathProperty="true" />
     <PackageReference Include="PolySharp" Version="1.13.2" PrivateAssets="all" />
   </ItemGroup>
+
+  <PropertyGroup>
+    <TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);_AddAnalyzersToOutput</TargetsForTfmSpecificContentInPackage>
+  </PropertyGroup>
+
+  <Target Name="_AddAnalyzersToOutput">
+    <Message Importance="High" Text="$(MSBuildProjectDirectory)\$(OutputPath)" />
+
+    <ItemGroup>
+      <TfmSpecificPackageFile Include="$(PkgGitReader)\lib\netstandard2.0\GitReader.dll" PackagePath="analyzers/dotnet/cs"  />
+      <TfmSpecificPackageFile Include="$(PkgH_Generators_Extensions)\lib\netstandard2.0\H.Generators.Extensions.dll" PackagePath="analyzers/dotnet/cs"  />
+    </ItemGroup>
+  </Target>
 
 </Project>
