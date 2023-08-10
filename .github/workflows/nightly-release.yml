@@ -42,7 +42,7 @@ jobs:
           path: nuget-packages
       - name: Push package to Myget
         if: ${{ vars.USE_MYGET == 'true' }}
-        run: dotnet nuget push 'nuget-packages/*.nupkg' --api-key ${{ secrets.MYGET_API_KEY }} --source https://www.myget.org/F/apple-app-store-connect/api/v3/index.json
+        run: dotnet nuget push 'nuget-packages/*.nupkg' --api-key ${{ secrets.MYGET_API_KEY }} --source https://www.myget.org/F/git-reader-source-generator/api/v3/index.json
       - name: Push package to Feedz
         if: ${{ vars.USE_FEEDZ == 'true' }}
-        run: dotnet nuget push 'nuget-packages/*.nupkg' --api-key ${{ secrets.FEEDZ_API_KEY }} --source https://f.feedz.io/aviationexam/apple-app-store-connect-api/nuget/index.json
+        run: dotnet nuget push 'nuget-packages/*.nupkg' --api-key ${{ secrets.FEEDZ_API_KEY }} --source https://f.feedz.io/aviationexam/git-reader-source-generator/nuget/index.json
