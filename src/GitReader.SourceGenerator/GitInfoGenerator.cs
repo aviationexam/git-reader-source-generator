@@ -149,11 +149,13 @@ public class GitInfoGenerator : IIncrementalGenerator
 
                public static string? Tag = {{(gitInfo.Tag is null ? "null" : $"\"{gitInfo.Tag.Name}\"")}};
 
-               public static int? TagMajor = {{(gitInfo.TagVersion is null ? "null" : $"{gitInfo.TagVersion.Major}")}};
+               public static int? TagMajor = {{(gitInfo.TagVersion is null || gitInfo.TagVersion.Major is -1 ? "null" : $"{gitInfo.TagVersion.Major}")}};
 
-               public static int? TagMinor = {{(gitInfo.TagVersion is null ? "null" : $"{gitInfo.TagVersion.Minor}")}};
+               public static int? TagMinor = {{(gitInfo.TagVersion is null || gitInfo.TagVersion.Minor is -1 ? "null" : $"{gitInfo.TagVersion.Minor}")}};
 
-               public static int? TagRevision = {{(gitInfo.TagVersion is null ? "null" : $"{gitInfo.TagVersion.Revision}")}};
+               public static int? TagBuild = {{(gitInfo.TagVersion is null || gitInfo.TagVersion.Build is -1 ? "null" : $"{gitInfo.TagVersion.Build}")}};
+
+               public static int? TagRevision = {{(gitInfo.TagVersion is null || gitInfo.TagVersion.Revision is -1 ? "null" : $"{gitInfo.TagVersion.Revision}")}};
            }
 
            #nullable restore
