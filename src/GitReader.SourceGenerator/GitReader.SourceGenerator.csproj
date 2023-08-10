@@ -14,6 +14,10 @@
 
   <PropertyGroup Label="NuGet">
     <PackageLicense>MIT</PackageLicense>
+    <RepositoryUrl>https://github.com/aviationexam/git-reader-source-generator</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <DevelopmentDependency>true</DevelopmentDependency>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
