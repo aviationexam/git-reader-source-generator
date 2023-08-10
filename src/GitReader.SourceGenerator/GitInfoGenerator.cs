@@ -23,7 +23,12 @@ public class GitInfoGenerator : IIncrementalGenerator
             x.GetGlobalOption("GitInfo_CommitAbbreviatedLength") is { } commitAbbreviatedString
             && int.TryParse(commitAbbreviatedString, out var commitAbbreviatedLength)
                 ? commitAbbreviatedLength
-                : 9
+                : 9,
+            // ReSharper disable once SimplifyConditionalTernaryExpression
+            x.GetGlobalOption("GitInfo_UseCache") is { } useCacheString
+            && bool.TryParse(useCacheString, out var useCache)
+                ? useCache
+                : true
         ))
         .SelectAndReportExceptions(GetSourceCode, context, Id)
         .AddSource(context);
@@ -31,13 +36,16 @@ public class GitInfoGenerator : IIncrementalGenerator
     private record GitInfoConfiguration(
         string RootDirectory,
         string TargetNamespace,
-        int CommitAbbreviatedLength
+        int CommitAbbreviatedLength,
+        bool UseCache
     );
 
     private static FileWithName GetSourceCode(
         GitInfoConfiguration configuration,
         CancellationToken cancellationToken
     ) => GetSourceCodeAsync(configuration, cancellationToken).ConfigureAwait(false).GetAwaiter().GetResult();
+
+    private static GitInfo? _gitInfoCache;
 
     private static async Task<FileWithName> GetSourceCodeAsync(
         GitInfoConfiguration configuration,
@@ -53,6 +61,14 @@ public class GitInfoGenerator : IIncrementalGenerator
 
         if (repository.Head is { } head)
         {
+            if (_gitInfoCache is { } gitInfoCache && gitInfoCache.CommitHash == head.Head.ToString())
+            {
+                return new FileWithName(
+                    fileName,
+                    GetFileContent(gitInfoCache)
+                );
+            }
+
             var refLogs = await repository.GetHeadReflogsAsync(cancellationToken);
 
             var refLog = refLogs[0];
@@ -95,18 +111,25 @@ public class GitInfoGenerator : IIncrementalGenerator
                 (tagName, tag, tagVersion) = regLogHasTags.OrderBy(x => x.Version).Single();
             }
 
+            gitInfoCache = new GitInfo(
+                configuration.TargetNamespace,
+                head.Name,
+                commitAbbreviatedHash,
+                commitHash,
+                refLog.Committer.Date,
+                tagName,
+                tag,
+                tagVersion
+            );
+
+            if (configuration.UseCache)
+            {
+                _gitInfoCache = gitInfoCache;
+            }
+
             return new FileWithName(
                 fileName,
-                GetFileContent(new GitInfo(
-                    configuration.TargetNamespace,
-                    head.Name,
-                    commitAbbreviatedHash,
-                    commitHash,
-                    refLog.Committer.Date,
-                    tagName,
-                    tag,
-                    tagVersion
-                ))
+                GetFileContent(gitInfoCache)
             );
         }
 

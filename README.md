@@ -25,6 +25,9 @@ This library build on top of [kekyo/GitReader](https://github.com/kekyo/GitReade
 
     <!-- optional, default value 9 -->
     <GitInfo_CommitAbbreviatedLength>9</GitInfo_CommitAbbreviatedLength>
+
+    <!-- optional, default value true -->
+    <GitInfo_UseCache>true</GitInfo_UseCache>
 </PropertyGroup>
 ```
 
