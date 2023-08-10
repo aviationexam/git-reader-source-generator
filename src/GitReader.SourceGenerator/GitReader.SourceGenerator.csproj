@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>11.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <PackageLicense>MIT</PackageLicense>
+    <ProjectName>GitReader.Generator</ProjectName>
+    <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
+    <DisableImplicitNuGetFallbackFolder>true</DisableImplicitNuGetFallbackFolder>
+  </PropertyGroup>
+
+  <Import Project="..\WarningConfiguration.targets" />
+
+  <PropertyGroup Label="NuGet">
+    <DevelopmentDependency>true</DevelopmentDependency>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <IncludeSymbols>false</IncludeSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+    <None Include="$(AssemblyName).props" Pack="true" PackagePath="build" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.6.0" PrivateAssets="all" />
+    <PackageReference Include="GitReader" Version="1.2.0" />
+    <PackageReference Include="H.Generators.Extensions" Version="1.15.1"  PrivateAssets="all" />
+    <PackageReference Include="PolySharp" Version="1.13.2" PrivateAssets="all" />
+  </ItemGroup>
+
+</Project>

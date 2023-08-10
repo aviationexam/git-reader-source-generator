@@ -1,0 +1,13 @@
+<Project>
+
+    <ItemGroup>
+        <CompilerVisibleProperty Include="GitInfo_RootDirectory" />
+        <CompilerVisibleProperty Include="GitInfo_Namespace" />
+        <CompilerVisibleProperty Include="GitInfo_CommitAbbreviatedLength" />
+    </ItemGroup>
+
+    <PropertyGroup>
+        <GitInfo_RootDirectory>$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildProjectDirectory), '.gitignore'))</GitInfo_RootDirectory>
+    </PropertyGroup>
+
+</Project>
