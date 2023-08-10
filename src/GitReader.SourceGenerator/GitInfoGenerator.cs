@@ -1,4 +1,4 @@
-﻿using GitReader.Structures;
+using GitReader.Structures;
 using H.Generators;
 using H.Generators.Extensions;
 using Microsoft.CodeAnalysis;
