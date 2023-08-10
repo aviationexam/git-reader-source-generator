@@ -27,6 +27,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.6.0" PrivateAssets="all" />
     <PackageReference Include="GitReader" Version="1.2.0" PrivateAssets="all" GeneratePathProperty="true" />
+    <PackageReference Include="GitReader.Core" Version="1.2.0" PrivateAssets="all" GeneratePathProperty="true" />
     <PackageReference Include="H.Generators.Extensions" Version="1.15.1" PrivateAssets="all" GeneratePathProperty="true" />
     <PackageReference Include="PolySharp" Version="1.13.2" PrivateAssets="all" />
   </ItemGroup>
@@ -40,6 +41,7 @@
 
     <ItemGroup>
       <TfmSpecificPackageFile Include="$(PkgGitReader)\lib\netstandard2.0\GitReader.dll" PackagePath="analyzers/dotnet/cs"  />
+      <TfmSpecificPackageFile Include="$(PkgGitReader_Core)\lib\netstandard2.0\GitReader.Core.dll" PackagePath="analyzers/dotnet/cs"  />
       <TfmSpecificPackageFile Include="$(PkgH_Generators_Extensions)\lib\netstandard2.0\H.Generators.Extensions.dll" PackagePath="analyzers/dotnet/cs"  />
     </ItemGroup>
   </Target>
