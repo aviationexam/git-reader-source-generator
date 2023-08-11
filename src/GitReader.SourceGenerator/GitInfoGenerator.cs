@@ -95,18 +95,18 @@ public class GitInfoGenerator : IIncrementalGenerator
             cancellationToken
         );
 
-        if (repository.Head is { } head)
+        if (
+            repository.Head is { } head
+            && await repository.GetCommitAsync(head.Head, cancellationToken) is { } commit
+        )
         {
             if (_gitInfoCache is { } gitInfoCache && gitInfoCache.CommitHash == head.Head.ToString())
             {
                 return (gitInfoCache, true);
             }
 
-            var refLogs = await repository.GetHeadReflogsAsync(cancellationToken);
-
-            var refLog = refLogs[0];
-
-            var commitHash = refLog.Commit.ToString();
+            var commitHash = commit.ToString();
+            var commitCommitter = commit.Committer;
             var commitAbbreviatedHash = commitHash;
 
             if (commitAbbreviatedHash.Length > configuration.CommitAbbreviatedLength)
@@ -120,30 +120,28 @@ public class GitInfoGenerator : IIncrementalGenerator
             Tag? tag = null;
             Version? tagVersion = null;
 
-            for (var i = 0; i < refLogs.Length; i++)
+            while (commit != null)
             {
-                var refLogI = refLogs[i];
-
                 var regLogHasTags = tags
-                    .Where(x => refLogI.Commit.HashCode.SequenceEqual(x.Value.ObjectHash.HashCode))
+                    .Where(x => commit.Hash.HashCode.SequenceEqual(x.Value.ObjectHash.HashCode))
                     .Select(x => (TagName: x.Key, Tag: x.Value, Version: new Version(x.Value.Name)))
                     .ToList();
 
-                if (regLogHasTags.Count == 0)
+                if (regLogHasTags.Count > 1)
                 {
-                    continue;
-                }
+                    if (regLogHasTags.Count == 1)
+                    {
+                        (tagName, tag, tagVersion) = regLogHasTags.Single();
 
-                if (regLogHasTags.Count == 1)
-                {
-                    (tagName, tag, tagVersion) = regLogHasTags.Single();
+                        break;
+                    }
+
+                    (tagName, tag, tagVersion) = regLogHasTags.OrderBy(x => x.Version).Single();
 
                     break;
                 }
 
-                (tagName, tag, tagVersion) = regLogHasTags.OrderBy(x => x.Version).Single();
-
-                break;
+                commit = await commit.GetPrimaryParentCommitAsync(cancellationToken);
             }
 
             gitInfoCache = new GitInfo(
@@ -152,7 +150,7 @@ public class GitInfoGenerator : IIncrementalGenerator
                 head.Name,
                 commitAbbreviatedHash,
                 commitHash,
-                refLog.Committer.Date,
+                commitCommitter.Date,
                 tagName,
                 tag,
                 tagVersion
