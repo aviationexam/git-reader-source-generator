@@ -10,7 +10,7 @@ This library build on top of [kekyo/GitReader](https://github.com/kekyo/GitReade
 ## Install
 ```xml
 <ItemGroup>
-    <PackageReference Include="GitReader.SourceGenerator" Version="0.1.0" OutputItemType="Analyzer" ReferenceOutputAssembly="false" PrivateAssets="all" />
+    <PackageReference Include="GitReader.SourceGenerator" Version="0.1.4" OutputItemType="Analyzer" ReferenceOutputAssembly="false" PrivateAssets="all" />
 </ItemGroup>
 ```
 
@@ -48,5 +48,6 @@ Console.WriteLine(GitInfo.TagName);
 Console.WriteLine(GitInfo.Tag);
 Console.WriteLine(GitInfo.TagMajor);
 Console.WriteLine(GitInfo.TagMinor);
+Console.WriteLine(GitInfo.TagBuild);
 Console.WriteLine(GitInfo.TagRevision);
 ```
