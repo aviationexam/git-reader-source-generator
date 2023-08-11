@@ -28,6 +28,11 @@ public class GitInfoGenerator : IIncrementalGenerator
             x.GetGlobalOption("GitInfo_UseCache") is { } useCacheString
             && bool.TryParse(useCacheString, out var useCache)
                 ? useCache
+                : true,
+            // ReSharper disable once SimplifyConditionalTernaryExpression
+            x.GetGlobalOption("GitInfo_UseAggressiveCache") is { } useAggressiveCacheString
+            && bool.TryParse(useAggressiveCacheString, out var useAggressiveCache)
+                ? useAggressiveCache
                 : true
         ))
         .SelectAndReportExceptions(GetSourceCode, context, Id)
@@ -37,7 +42,8 @@ public class GitInfoGenerator : IIncrementalGenerator
         string RootDirectory,
         string TargetNamespace,
         int CommitAbbreviatedLength,
-        bool UseCache
+        bool UseCache,
+        bool UseAggressiveCache
     );
 
     private static FileWithName GetSourceCode(
@@ -79,6 +85,11 @@ public class GitInfoGenerator : IIncrementalGenerator
         CancellationToken cancellationToken
     )
     {
+        if (configuration.UseAggressiveCache && _gitInfoCache is not null)
+        {
+            return (_gitInfoCache, true);
+        }
+
         using var repository = await Repository.Factory.OpenStructureAsync(
             configuration.RootDirectory,
             cancellationToken

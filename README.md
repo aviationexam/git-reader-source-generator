@@ -28,6 +28,10 @@ This library build on top of [kekyo/GitReader](https://github.com/kekyo/GitReade
 
     <!-- optional, default value true -->
     <GitInfo_UseCache>true</GitInfo_UseCache>
+
+    <!-- optional, default value false -->
+    <!-- it check only cache existence, not that HEAD equals HEAD in cache -->
+    <GitInfo_UseAggressiveCache>true</GitInfo_UseAggressiveCache>
 </PropertyGroup>
 ```
 

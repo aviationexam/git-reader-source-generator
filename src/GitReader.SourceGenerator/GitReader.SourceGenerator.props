@@ -5,6 +5,7 @@
         <CompilerVisibleProperty Include="GitInfo_Namespace" />
         <CompilerVisibleProperty Include="GitInfo_CommitAbbreviatedLength" />
         <CompilerVisibleProperty Include="GitInfo_UseCache" />
+        <CompilerVisibleProperty Include="GitInfo_UseAggressiveCache" />
     </ItemGroup>
 
     <PropertyGroup>
