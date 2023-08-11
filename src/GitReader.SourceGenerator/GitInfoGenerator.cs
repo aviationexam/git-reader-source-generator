@@ -138,10 +138,12 @@ public class GitInfoGenerator : IIncrementalGenerator
                 {
                     (tagName, tag, tagVersion) = regLogHasTags.Single();
 
-                    continue;
+                    break;
                 }
 
                 (tagName, tag, tagVersion) = regLogHasTags.OrderBy(x => x.Version).Single();
+
+                break;
             }
 
             gitInfoCache = new GitInfo(
