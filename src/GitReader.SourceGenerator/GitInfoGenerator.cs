@@ -105,7 +105,7 @@ public class GitInfoGenerator : IIncrementalGenerator
                 return (gitInfoCache, true);
             }
 
-            var commitHash = commit.ToString();
+            var commitHash = commit.Hash.ToString();
             var commitCommitter = commit.Committer;
             var commitAbbreviatedHash = commitHash;
 
