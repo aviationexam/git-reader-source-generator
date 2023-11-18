@@ -128,7 +128,7 @@ public class GitInfoGenerator : IIncrementalGenerator
                     .Where(x => x.Version is not null)
                     .ToList();
 
-                if (regLogHasTags.Count > 1)
+                if (regLogHasTags.Count >= 1)
                 {
                     if (regLogHasTags.Count == 1)
                     {
@@ -157,14 +157,12 @@ public class GitInfoGenerator : IIncrementalGenerator
                 tagVersion
             );
 
-            var cacheHit = false;
             if (configuration.UseCache)
             {
-                cacheHit = true;
                 _gitInfoCache = gitInfoCache;
             }
 
-            return (gitInfoCache, cacheHit);
+            return (gitInfoCache, false);
         }
 
         return null;
