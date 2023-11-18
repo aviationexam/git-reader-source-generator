@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net7.0</TargetFrameworks>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>12.0</LangVersion>
     <Nullable>enable</Nullable>
     <ProjectName>GitReader.Generator</ProjectName>
@@ -29,7 +29,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="8.0.0" PrivateAssets="all" GeneratePathProperty="true" />
     <PackageReference Include="Microsoft.Bcl.TimeProvider" Version="8.0.0" PrivateAssets="all" GeneratePathProperty="true" />
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.7.0" PrivateAssets="all" />
     <PackageReference Include="GitReader" Version="1.7.0" PrivateAssets="all" GeneratePathProperty="true" />
@@ -44,9 +43,12 @@
 
   <Target Name="_AddAnalyzersToOutput">
     <Message Importance="High" Text="$(MSBuildProjectDirectory)\$(OutputPath)" />
+    <Message Importance="High" Text="$(PkgMicrosoft_Bcl_TimeProvider)\lib\netstandard2.0\Microsoft.Bcl.TimeProvider.dll" />
+    <Message Importance="High" Text="$(PkgGitReader)\lib\netstandard2.0\GitReader.dll" />
+    <Message Importance="High" Text="$(PkgGitReader_Core)\lib\netstandard2.0\GitReader.Core.dll" />
+    <Message Importance="High" Text="$(PkgH_Generators_Extensions)\lib\netstandard2.0\H.Generators.Extensions.dll" />
 
     <ItemGroup>
-      <TfmSpecificPackageFile Include="$(PkgMicrosoft_Bcl_AsyncInterfaces)\lib\netstandard2.0\Microsoft.Bcl.AsyncInterfaces.dll" PackagePath="analyzers/dotnet/cs"  />
       <TfmSpecificPackageFile Include="$(PkgMicrosoft_Bcl_TimeProvider)\lib\netstandard2.0\Microsoft.Bcl.TimeProvider.dll" PackagePath="analyzers/dotnet/cs"  />
       <TfmSpecificPackageFile Include="$(PkgGitReader)\lib\netstandard2.0\GitReader.dll" PackagePath="analyzers/dotnet/cs"  />
       <TfmSpecificPackageFile Include="$(PkgGitReader_Core)\lib\netstandard2.0\GitReader.Core.dll" PackagePath="analyzers/dotnet/cs"  />

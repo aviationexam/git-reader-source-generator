@@ -19,12 +19,14 @@ jobs:
         with:
           dotnet-version: '8.0.x'
       - uses: actions/checkout@v4
-      - name: Retore
+      - name: Restore
         run: dotnet restore --nologo
       - name: Build
         run: dotnet build --no-restore --nologo --configuration Release
       - name: Test
         run: dotnet test --nologo --no-build --configuration Release
+      - name: Pack
+        run: dotnet pack --nologo --no-build --configuration Release --output nuget-packages src/GitReader.SourceGenerator/GitReader.SourceGenerator.csproj
 
   code-style:
     runs-on: ubuntu-latest
