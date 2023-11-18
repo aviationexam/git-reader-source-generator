@@ -367,3 +367,5 @@ ASALocalRun/
 /src/Apple.AppStoreConnect.OpenApiDocument/app-store-connect-openapi-specification.zip
 /src/Apple.AppStoreConnect.OpenApiDocument/app-store-connect-openapi-specification/
 /src/Apple.AppStoreConnect/app-store-connect-openapi-specification/
+
+repository-snapshots/v-tag-repository
