@@ -124,7 +124,8 @@ public class GitInfoGenerator : IIncrementalGenerator
             {
                 var regLogHasTags = tags
                     .Where(x => commit.Hash.HashCode.SequenceEqual(x.Value.ObjectHash.HashCode))
-                    .Select(x => (TagName: x.Key, Tag: x.Value, Version: new Version(x.Value.Name)))
+                    .Select(x => (TagName: x.Key, Tag: x.Value, Version: ParseTag(x.Value.Name)))
+                    .Where(x => x.Version is not null)
                     .ToList();
 
                 if (regLogHasTags.Count > 1)
@@ -167,6 +168,29 @@ public class GitInfoGenerator : IIncrementalGenerator
         }
 
         return null;
+    }
+
+    private static Version? ParseTag(string tag)
+    {
+        var tagName = tag.AsSpan();
+
+        if (tagName.Length > 0 && tagName[0] == 'v')
+        {
+            tagName = tagName[1..];
+        }
+
+        foreach (var ch in tagName)
+        {
+            if (
+                !char.IsDigit(ch)
+                && ch != '.'
+            )
+            {
+                return null;
+            }
+        }
+
+        return new Version(tagName.ToString());
     }
 
     private static string GetFileContent(
