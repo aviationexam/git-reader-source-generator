@@ -10,9 +10,24 @@ using System.Threading.Tasks;
 namespace GitReader.SourceGenerator;
 
 [Generator]
-public class GitInfoGenerator : IIncrementalGenerator
+public class GitInfoGenerator : IIncrementalGenerator, IIncrementalGeneratorFactory<GitInfoGenerator>
 {
     public const string Id = "GI";
+
+    private readonly TimeProvider _timeProvider;
+
+    public GitInfoGenerator() : this(TimeProvider.System)
+    {
+    }
+
+    protected GitInfoGenerator(TimeProvider timeProvider)
+    {
+        _timeProvider = timeProvider;
+    }
+
+    public static GitInfoGenerator Create(TimeProvider timeProvider) => new(
+        timeProvider
+    );
 
     public void Initialize(
         IncrementalGeneratorInitializationContext context
@@ -46,14 +61,14 @@ public class GitInfoGenerator : IIncrementalGenerator
         bool UseAggressiveCache
     );
 
-    private static FileWithName GetSourceCode(
+    private FileWithName GetSourceCode(
         GitInfoConfiguration configuration,
         CancellationToken cancellationToken
     ) => GetSourceCodeAsync(configuration, cancellationToken).ConfigureAwait(false).GetAwaiter().GetResult();
 
     private static GitInfo? _gitInfoCache;
 
-    private static async Task<FileWithName> GetSourceCodeAsync(
+    private async Task<FileWithName> GetSourceCodeAsync(
         GitInfoConfiguration configuration,
         CancellationToken cancellationToken
     )
@@ -80,7 +95,7 @@ public class GitInfoGenerator : IIncrementalGenerator
         );
     }
 
-    private static async Task<(GitInfo gitInfo, bool cacheHit)?> LoadGitInfoAsync(
+    private async Task<(GitInfo gitInfo, bool cacheHit)?> LoadGitInfoAsync(
         GitInfoConfiguration configuration,
         CancellationToken cancellationToken
     )
@@ -146,7 +161,7 @@ public class GitInfoGenerator : IIncrementalGenerator
             }
 
             gitInfoCache = new GitInfo(
-                DateTimeOffset.Now,
+                _timeProvider.GetUtcNow(),
                 configuration.TargetNamespace,
                 head.Name,
                 commitAbbreviatedHash,
