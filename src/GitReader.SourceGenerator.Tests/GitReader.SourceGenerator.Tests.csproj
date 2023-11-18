@@ -1,0 +1,61 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net7.0;net8.0</TargetFrameworks>
+    <LangVersion>12.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <Import Project="..\WarningConfiguration.targets" />
+
+  <ItemGroup>
+    <PackageReference Include="H.Generators.Tests.Extensions" Version="1.20.0" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.4" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.7.0" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.7.0" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.Extensions.TimeProvider.Testing" Version="8.0.0" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+    <PackageReference Include="System.Text.Json" Version="8.0.0" />
+    <PackageReference Include="Verify.XUnit" Version="22.5.0" />
+    <PackageReference Include="Verify.SourceGenerators" Version="2.2.0" />
+    <PackageReference Include="xunit" Version="2.6.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GitReader.SourceGenerator\GitReader.SourceGenerator.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="GitReaderSnapshotTests.*.g.verified.cs">
+      <DependentUpon>GitReaderSnapshotTests.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+
+  <Target Name="ExtractSnapshots" BeforeTargets="Restore;_GenerateRestoreProjectSpec">
+    <Message Importance="High" Text="Extracting $(MSBuildProjectDirectory)/../../v-tag-repository.zip to the $(MSBuildProjectDirectory)/../../repository-snapshots" />
+    <Message Importance="High" Text="Extracting $(MSBuildProjectDirectory)/../../tag-repository.zip to the $(MSBuildProjectDirectory)/../../repository-snapshots" />
+    <Message Importance="High" Text="Extracting $(MSBuildProjectDirectory)/../../no-tag-repository.zip to the $(MSBuildProjectDirectory)/../../repository-snapshots" />
+
+    <Unzip SourceFiles="$(MSBuildProjectDirectory)/../../repository-snapshots/v-tag-repository.zip"
+           DestinationFolder="$(MSBuildProjectDirectory)/../../repository-snapshots"
+           Condition="!Exists('$(MSBuildProjectDirectory)/../../repository-snapshots/v-tag-repository')"
+           OverwriteReadOnlyFiles="true" />
+
+    <Unzip SourceFiles="$(MSBuildProjectDirectory)/../../repository-snapshots/tag-repository.zip"
+           DestinationFolder="$(MSBuildProjectDirectory)/../../repository-snapshots"
+           Condition="!Exists('$(MSBuildProjectDirectory)/../../repository-snapshots/tag-repository')"
+           OverwriteReadOnlyFiles="true" />
+
+    <Unzip SourceFiles="$(MSBuildProjectDirectory)/../../repository-snapshots/no-tag-repository.zip"
+           DestinationFolder="$(MSBuildProjectDirectory)/../../repository-snapshots"
+           Condition="!Exists('$(MSBuildProjectDirectory)/../../repository-snapshots/no-tag-repository')"
+           OverwriteReadOnlyFiles="true" />
+  </Target>
+
+</Project>

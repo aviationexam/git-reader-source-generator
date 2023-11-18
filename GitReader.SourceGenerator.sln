@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitReader.SourceGenerator", "src\GitReader.SourceGenerator\GitReader.SourceGenerator.csproj", "{026690F8-2C9D-4D94-8437-FE9B85007212}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitReader.SourceGenerator.Tests", "src\GitReader.SourceGenerator.Tests\GitReader.SourceGenerator.Tests.csproj", "{19BD5AEF-CC21-4BD7-A077-E8305F1324CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,5 +36,9 @@ Global
 		{026690F8-2C9D-4D94-8437-FE9B85007212}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{026690F8-2C9D-4D94-8437-FE9B85007212}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{026690F8-2C9D-4D94-8437-FE9B85007212}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19BD5AEF-CC21-4BD7-A077-E8305F1324CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19BD5AEF-CC21-4BD7-A077-E8305F1324CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19BD5AEF-CC21-4BD7-A077-E8305F1324CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19BD5AEF-CC21-4BD7-A077-E8305F1324CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
