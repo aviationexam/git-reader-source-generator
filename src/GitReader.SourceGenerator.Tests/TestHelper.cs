@@ -1,7 +1,6 @@
 using H.Generators.Tests.Extensions;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
-using Microsoft.Extensions.Time.Testing;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
@@ -29,19 +28,19 @@ public static class TestHelper
     }
 
     public static Task Verify<TIncrementalGenerator>(
-        DateTimeOffset startDateTime,
+        TIncrementalGenerator generator,
         [StringSyntax("csharp")] params string[] source
-    ) where TIncrementalGenerator : class, IIncrementalGenerator, IIncrementalGeneratorFactory<TIncrementalGenerator> => Verify<TIncrementalGenerator>(
-        startDateTime,
+    ) where TIncrementalGenerator : class, IIncrementalGenerator => Verify(
+        generator,
         new DictionaryAnalyzerConfigOptionsProvider(),
         source
     );
 
     public static Task Verify<TIncrementalGenerator>(
-        DateTimeOffset startDateTime,
+        TIncrementalGenerator generator,
         DictionaryAnalyzerConfigOptionsProvider analyzerConfigOptionsProvider,
         [StringSyntax("csharp")] params string[] source
-    ) where TIncrementalGenerator : class, IIncrementalGenerator, IIncrementalGeneratorFactory<TIncrementalGenerator>
+    ) where TIncrementalGenerator : class, IIncrementalGenerator
     {
         // Parse the provided string into a C# syntax tree
         var syntaxTrees = source.Select(x => CSharpSyntaxTree.ParseText(x)).ToArray();
@@ -58,9 +57,6 @@ public static class TestHelper
                 .ToArray()
         );
 
-        // Create an instance of our EnumGenerator incremental source generator
-        var generator = TIncrementalGenerator.Create(new FakeTimeProvider(startDateTime));
-
         // The GeneratorDriver is used to run our generator against a compilation
         GeneratorDriver driver = CSharpGeneratorDriver.Create(
             new[] { generator.AsSourceGenerator() },
@@ -72,20 +68,5 @@ public static class TestHelper
 
         // Use verify to snapshot test the source generator output!
         return Verifier.Verify(driver);
-    }
-
-    private static IEnumerable<string> GetLocationWithDependencies(Type type) => GetLocationWithDependencies(type.Assembly);
-
-    private static IEnumerable<string> GetLocationWithDependencies(Assembly assembly)
-    {
-        foreach (var referencedAssembly in assembly.GetReferencedAssemblies())
-        {
-            foreach (var path in GetLocationWithDependencies(Assembly.Load(referencedAssembly)))
-            {
-                yield return path;
-            }
-        }
-
-        yield return assembly.Location;
     }
 }

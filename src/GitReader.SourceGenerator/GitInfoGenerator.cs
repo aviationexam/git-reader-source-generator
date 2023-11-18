@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace GitReader.SourceGenerator;
 
 [Generator]
-public class GitInfoGenerator : IIncrementalGenerator, IIncrementalGeneratorFactory<GitInfoGenerator>
+public class GitInfoGenerator : IIncrementalGenerator
 {
     public const string Id = "GI";
 
@@ -20,7 +20,7 @@ public class GitInfoGenerator : IIncrementalGenerator, IIncrementalGeneratorFact
     {
     }
 
-    protected GitInfoGenerator(TimeProvider timeProvider)
+    public GitInfoGenerator(TimeProvider timeProvider)
     {
         _timeProvider = timeProvider;
     }
