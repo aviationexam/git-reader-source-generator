@@ -37,10 +37,25 @@
     </None>
   </ItemGroup>
 
-  <Target Name="ExtractSnapshots" BeforeTargets="Restore;_GenerateRestoreProjectSpec" Condition="!Exists('$(MSBuildProjectDirectory)/../../repository-snapshots/v-tag-repository')">
+  <Target Name="ExtractSnapshots" BeforeTargets="Restore;_GenerateRestoreProjectSpec">
     <Message Importance="High" Text="Extracting $(MSBuildProjectDirectory)/../../v-tag-repository.zip to the $(MSBuildProjectDirectory)/../../repository-snapshots" />
+    <Message Importance="High" Text="Extracting $(MSBuildProjectDirectory)/../../tag-repository.zip to the $(MSBuildProjectDirectory)/../../repository-snapshots" />
+    <Message Importance="High" Text="Extracting $(MSBuildProjectDirectory)/../../no-tag-repository.zip to the $(MSBuildProjectDirectory)/../../repository-snapshots" />
 
-    <Unzip SourceFiles="$(MSBuildProjectDirectory)/../../repository-snapshots/v-tag-repository.zip" DestinationFolder="$(MSBuildProjectDirectory)/../../repository-snapshots" OverwriteReadOnlyFiles="true" />
+    <Unzip SourceFiles="$(MSBuildProjectDirectory)/../../repository-snapshots/v-tag-repository.zip"
+           DestinationFolder="$(MSBuildProjectDirectory)/../../repository-snapshots"
+           Condition="!Exists('$(MSBuildProjectDirectory)/../../repository-snapshots/v-tag-repository')"
+           OverwriteReadOnlyFiles="true" />
+
+    <Unzip SourceFiles="$(MSBuildProjectDirectory)/../../repository-snapshots/tag-repository.zip"
+           DestinationFolder="$(MSBuildProjectDirectory)/../../repository-snapshots"
+           Condition="!Exists('$(MSBuildProjectDirectory)/../../repository-snapshots/tag-repository')"
+           OverwriteReadOnlyFiles="true" />
+
+    <Unzip SourceFiles="$(MSBuildProjectDirectory)/../../repository-snapshots/no-tag-repository.zip"
+           DestinationFolder="$(MSBuildProjectDirectory)/../../repository-snapshots"
+           Condition="!Exists('$(MSBuildProjectDirectory)/../../repository-snapshots/no-tag-repository')"
+           OverwriteReadOnlyFiles="true" />
   </Target>
 
 </Project>

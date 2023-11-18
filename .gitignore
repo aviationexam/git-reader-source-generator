@@ -369,3 +369,5 @@ ASALocalRun/
 /src/Apple.AppStoreConnect/app-store-connect-openapi-specification/
 
 repository-snapshots/v-tag-repository
+repository-snapshots/tag-repository
+repository-snapshots/no-tag-repository
