@@ -1,4 +1,4 @@
-﻿using H.Generators.Tests.Extensions;
+using H.Generators.Tests.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;

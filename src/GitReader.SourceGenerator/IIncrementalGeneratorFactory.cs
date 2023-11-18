@@ -1,4 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
+using System.Diagnostics.CodeAnalysis;
 #if NET7_0_OR_GREATER
 using System;
 #endif
@@ -7,7 +7,7 @@ namespace GitReader.SourceGenerator;
 
 public interface IIncrementalGeneratorFactory<
     [SuppressMessage("ReSharper", "UnusedTypeParameter")]
-    T
+T
 >
 {
 #if NET7_0_OR_GREATER
