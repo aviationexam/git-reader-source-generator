@@ -34,7 +34,7 @@
     <PackageReference Include="GitReader" Version="1.7.0" PrivateAssets="all" GeneratePathProperty="true" />
     <PackageReference Include="GitReader.Core" Version="1.7.0" PrivateAssets="all" GeneratePathProperty="true" />
     <PackageReference Include="H.Generators.Extensions" Version="1.20.0" PrivateAssets="all" GeneratePathProperty="true" />
-    <PackageReference Include="PolySharp" Version="1.13.2" PrivateAssets="all" />
+    <PackageReference Include="PolySharp" Version="1.14.0" PrivateAssets="all" />
   </ItemGroup>
 
   <PropertyGroup>
