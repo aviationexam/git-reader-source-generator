@@ -18,6 +18,10 @@ updates:
         patterns:
           - xunit
           - xunit.*
+      verify:
+        patterns:
+          - Verify
+          - Verify.*
 
   - package-ecosystem: "github-actions"
     directory: "/" # Location of package manifests
