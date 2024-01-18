@@ -3,12 +3,10 @@ using Microsoft.Extensions.Time.Testing;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using VerifyXunit;
 using Xunit;
 
 namespace GitReader.SourceGenerator.Tests;
 
-[UsesVerify]
 public class GitReaderSnapshotTests
 {
     [Fact]
