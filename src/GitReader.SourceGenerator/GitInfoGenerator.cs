@@ -1,5 +1,4 @@
 using GitReader.Structures;
-using H.Generators;
 using H.Generators.Extensions;
 using Microsoft.CodeAnalysis;
 using System;
@@ -10,19 +9,14 @@ using System.Threading.Tasks;
 namespace GitReader.SourceGenerator;
 
 [Generator]
-public class GitInfoGenerator : IIncrementalGenerator
+public class GitInfoGenerator(
+    TimeProvider timeProvider
+) : IIncrementalGenerator
 {
     public const string Id = "GI";
 
-    private readonly TimeProvider _timeProvider;
-
     public GitInfoGenerator() : this(TimeProvider.System)
     {
-    }
-
-    public GitInfoGenerator(TimeProvider timeProvider)
-    {
-        _timeProvider = timeProvider;
     }
 
     public static GitInfoGenerator Create(TimeProvider timeProvider) => new(
@@ -107,6 +101,7 @@ public class GitInfoGenerator : IIncrementalGenerator
 
         using var repository = await Repository.Factory.OpenStructureAsync(
             configuration.RootDirectory,
+            new NonBlockingFileSystem(65536),
             cancellationToken
         );
 
@@ -161,7 +156,7 @@ public class GitInfoGenerator : IIncrementalGenerator
             }
 
             gitInfoCache = new GitInfo(
-                _timeProvider.GetUtcNow(),
+                timeProvider.GetUtcNow(),
                 configuration.TargetNamespace,
                 head.Name,
                 commitAbbreviatedHash,
