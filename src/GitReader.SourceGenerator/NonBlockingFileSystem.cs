@@ -1,4 +1,4 @@
-﻿using GitReader.IO;
+using GitReader.IO;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Threading;
