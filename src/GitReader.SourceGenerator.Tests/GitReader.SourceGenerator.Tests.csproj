@@ -15,6 +15,7 @@
   <Import Project="..\WarningConfiguration.targets" />
 
   <ItemGroup>
+    <PackageReference Include="H.Generators.Extensions" Version="1.24.1" />
     <PackageReference Include="H.Generators.Tests.Extensions" Version="1.24.1" />
     <PackageReference Include="Microsoft.Bcl.TimeProvider" Version="8.0.1" />
     <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.11.0" PrivateAssets="all" />
