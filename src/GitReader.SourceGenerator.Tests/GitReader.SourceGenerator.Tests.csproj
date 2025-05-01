@@ -23,7 +23,7 @@
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.13.0" PrivateAssets="all" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.13.0" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
-    <PackageReference Include="Verify.XUnitV3" Version="29.4.0" />
+    <PackageReference Include="Verify.XUnitV3" Version="29.5.0" />
     <PackageReference Include="Verify.SourceGenerators" Version="2.5.0" />
     <PackageReference Include="xunit.v3" Version="2.0.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="3.0.2">
@@ -33,8 +33,8 @@
   </ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net8.0' ">
-    <PackageReference Include="System.Text.Json" Version="8.0.5" />
-    <PackageReference Include="Microsoft.Extensions.TimeProvider.Testing" Version="8.10.0" />
+    <PackageReference Include="System.Text.Json" Version="9.0.4" />
+    <PackageReference Include="Microsoft.Extensions.TimeProvider.Testing" Version="9.4.0" />
   </ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net9.0' ">
