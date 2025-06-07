@@ -19,7 +19,7 @@ This library build on top of [kekyo/GitReader](https://github.com/kekyo/GitReade
 ```xml
 <PropertyGroup Label="Configure GitInfo">
     <!-- optional, default value: $([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildProjectDirectory), '.gitignore')) -->
-    <GitInfo_RootDirectory>$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildProjectDirectory), 'My.Project.sln'))\..\.git</GitInfo_RootDirectory>
+    <GitInfo_RootDirectory>$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildProjectDirectory), 'My.Project.slnx'))\..\.git</GitInfo_RootDirectory>
 
     <GitInfo_Namespace>My.Project.GitInfoNamespace</GitInfo_Namespace>
 
