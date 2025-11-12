@@ -55,4 +55,24 @@ internal sealed class NonBlockingFileSystem(
     public Task<TemporaryFileDescriptor> CreateTemporaryAsync(
         CancellationToken ct
     ) => _fileSystem.CreateTemporaryAsync(ct);
+
+    public string GetFileName(
+        string path
+    ) => _fileSystem.GetFileName(path);
+
+    public Task<bool> IsDirectoryExistsAsync(
+        string path, CancellationToken ct)
+        => _fileSystem.IsDirectoryExistsAsync(path, ct);
+
+    public Task<string[]> GetDirectoryEntriesAsync(
+        string path, CancellationToken ct
+    ) => _fileSystem.GetDirectoryEntriesAsync(path, ct);
+
+    public string GetRelativePath(
+        string basePath, string path
+    ) => _fileSystem.GetRelativePath(basePath, path);
+
+    public string ToPosixPath(
+        string path
+    ) => _fileSystem.ToPosixPath(path);
 }
