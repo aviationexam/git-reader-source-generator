@@ -27,7 +27,7 @@ jobs:
       - name: Build
         run: dotnet build --no-restore --nologo --configuration Release
       - name: Test
-        run: dotnet test --nologo --no-build --configuration Release
+        run: dotnet test --no-build --configuration Release
       - name: Pack
         run: dotnet pack --nologo --no-build --configuration Release --output nuget-packages src/GitReader.SourceGenerator/GitReader.SourceGenerator.csproj
 
