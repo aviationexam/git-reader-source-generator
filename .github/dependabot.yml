@@ -3,26 +3,11 @@
 # Please see the documentation for all configuration options:
 # https://help.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
 
+# Note: NuGet dependency updates are now handled by Aviationexam.DependencyUpdater
+# See .github/updater.yml and .github/workflows/dependency-updates.yml
+
 version: 2
 updates:
-  - package-ecosystem: "nuget"
-    directory: "/" # Location of package manifests
-    schedule:
-      interval: "daily"
-    groups:
-      microsoft:
-        patterns:
-          - Microsoft.*
-          - System.*
-      xunit:
-        patterns:
-          - xunit
-          - xunit.*
-      verify:
-        patterns:
-          - Verify
-          - Verify.*
-
   - package-ecosystem: "github-actions"
     directory: "/" # Location of package manifests
     schedule:
