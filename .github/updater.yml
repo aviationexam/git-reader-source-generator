@@ -12,8 +12,11 @@ registries:
 updates:
   - package-ecosystem: "nuget"
     directory: "/"
+    target-branch: main
     targetFramework: netstandard2.0
     execute-restore: true
+    registries:
+      - nuget
     groups:
       microsoft:
         patterns:
