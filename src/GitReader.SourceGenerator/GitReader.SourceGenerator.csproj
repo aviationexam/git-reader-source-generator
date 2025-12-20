@@ -29,12 +29,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Bcl.TimeProvider" Version="10.0.1" PrivateAssets="all" GeneratePathProperty="true" />
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.14.0" PrivateAssets="all" />
-    <PackageReference Include="GitReader" Version="1.16.0" PrivateAssets="all" GeneratePathProperty="true" />
-    <PackageReference Include="GitReader.Core" Version="1.16.0" PrivateAssets="all" GeneratePathProperty="true" />
-    <PackageReference Include="H.Generators.Extensions" Version="1.24.2" PrivateAssets="all" GeneratePathProperty="true" />
-    <PackageReference Include="PolySharp" Version="1.15.0" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.Bcl.TimeProvider" PrivateAssets="all" GeneratePathProperty="true" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" PrivateAssets="all" />
+    <PackageReference Include="GitReader" PrivateAssets="all" GeneratePathProperty="true" />
+    <PackageReference Include="GitReader.Core" PrivateAssets="all" GeneratePathProperty="true" />
+    <PackageReference Include="H.Generators.Extensions" PrivateAssets="all" GeneratePathProperty="true" />
+    <PackageReference Include="PolySharp" PrivateAssets="all" />
   </ItemGroup>
 
   <PropertyGroup>
