@@ -34,9 +34,9 @@
       },
       "Microsoft.Bcl.TimeProvider": {
         "type": "Direct",
-        "requested": "[10.0.0, )",
-        "resolved": "10.0.0",
-        "contentHash": "bUubrBD6tRJE3V1kvRloYc6NymH3R5oFKjAS9e0ELNx6u0ZR+zjps9dDQyjgqN/rArzl7f+21KGszj3YRN7F2Q=="
+        "requested": "[10.0.1, )",
+        "resolved": "10.0.1",
+        "contentHash": "8HOsGatv7IgK54r1Dn8ZxnHm+K2dRWiUNRPdtJCQY78olD8m5T1iMVzi4gdUyle8zNn5FVAgx7hHoyyJEDy1Qw=="
       },
       "Microsoft.CodeAnalysis.Analyzers": {
         "type": "Direct",
@@ -60,9 +60,9 @@
       },
       "Microsoft.Extensions.TimeProvider.Testing": {
         "type": "Direct",
-        "requested": "[10.0.0, )",
-        "resolved": "10.0.0",
-        "contentHash": "aX2J/3k8BNWzIVCATarxY3xcS2iZm9kW2aN+tAD/qE29OcaySBU+8DC/KhoDk9gfqfYtptnN/eJ+WOZ4yT/hcQ=="
+        "requested": "[10.1.0, )",
+        "resolved": "10.1.0",
+        "contentHash": "wH/CohN2yvYlpyPptNwWVZxlIQ8CkFvcv1eOEZTi/y8FhqVeISLbrraaW0qvVtXRKEeO0EyapNCZzj4HtdRGRw=="
       },
       "Microsoft.Testing.Extensions.CodeCoverage": {
         "type": "Direct",
@@ -550,9 +550,9 @@
       },
       "Microsoft.Bcl.TimeProvider": {
         "type": "Direct",
-        "requested": "[10.0.0, )",
-        "resolved": "10.0.0",
-        "contentHash": "bUubrBD6tRJE3V1kvRloYc6NymH3R5oFKjAS9e0ELNx6u0ZR+zjps9dDQyjgqN/rArzl7f+21KGszj3YRN7F2Q=="
+        "requested": "[10.0.1, )",
+        "resolved": "10.0.1",
+        "contentHash": "8HOsGatv7IgK54r1Dn8ZxnHm+K2dRWiUNRPdtJCQY78olD8m5T1iMVzi4gdUyle8zNn5FVAgx7hHoyyJEDy1Qw=="
       },
       "Microsoft.CodeAnalysis.Analyzers": {
         "type": "Direct",
@@ -1103,9 +1103,9 @@
       },
       "Microsoft.Bcl.TimeProvider": {
         "type": "Direct",
-        "requested": "[10.0.0, )",
-        "resolved": "10.0.0",
-        "contentHash": "bUubrBD6tRJE3V1kvRloYc6NymH3R5oFKjAS9e0ELNx6u0ZR+zjps9dDQyjgqN/rArzl7f+21KGszj3YRN7F2Q=="
+        "requested": "[10.0.1, )",
+        "resolved": "10.0.1",
+        "contentHash": "8HOsGatv7IgK54r1Dn8ZxnHm+K2dRWiUNRPdtJCQY78olD8m5T1iMVzi4gdUyle8zNn5FVAgx7hHoyyJEDy1Qw=="
       },
       "Microsoft.CodeAnalysis.Analyzers": {
         "type": "Direct",
