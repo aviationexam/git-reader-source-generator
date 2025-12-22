@@ -72,15 +72,23 @@
         "contentHash": "FbU0El+EEjdpuIX4iDbeS7ki1uzpJPx8vbqOzEtqnl1GZeAGJfq+jCbxeJL2y0EPnUNk8dRnnqR2xnYXg9Tf+g=="
       },
       "Microsoft.Bcl.AsyncInterfaces": {
-        "type": "Transitive",
+        "type": "CentralTransitive",
+        "requested": "[10.0.1, )",
         "resolved": "10.0.1",
         "contentHash": "E1HSLkPHXEO30JEij2pWbOuzz1Z5ND4a5l7IP1T2RgQuE0a0NzEIvtO64RNy3Otn6PFezbT80cfm3M/Cgt70PA==",
         "dependencies": {
           "System.Threading.Tasks.Extensions": "4.6.3"
         }
       },
+      "Microsoft.CodeAnalysis.Analyzers": {
+        "type": "CentralTransitive",
+        "requested": "[4.14.0, )",
+        "resolved": "4.14.0",
+        "contentHash": "fCj+MzjJxN/4iYAz7JPLONGKeTomaZNzx4UgGA0AerTrx4Ou6Rw2J5YF4V51vWW+aSQSCv1nnAkCZUw5Z9+3zw=="
+      },
       "Microsoft.CodeAnalysis.Common": {
-        "type": "Transitive",
+        "type": "CentralTransitive",
+        "requested": "[4.14.0, )",
         "resolved": "4.14.0",
         "contentHash": "PC3tuwZYnC+idaPuoC/AZpEdwrtX7qFpmnrfQkgobGIWiYmGi5MCRtl5mx6QrfMGQpK78X2lfIEoZDLg/qnuHg==",
         "dependencies": {
@@ -96,17 +104,20 @@
         }
       },
       "Microsoft.NETCore.Platforms": {
-        "type": "Transitive",
+        "type": "CentralTransitive",
+        "requested": "[1.1.0, )",
         "resolved": "1.1.0",
         "contentHash": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A=="
       },
       "System.Buffers": {
-        "type": "Transitive",
+        "type": "CentralTransitive",
+        "requested": "[4.5.1, )",
         "resolved": "4.5.1",
         "contentHash": "Rw7ijyl1qqRS0YQD/WycNst8hUUMgrMH4FCn1nNm27M4VxchZ1js3fVjQaANHO5f3sN4isvP4a+Met9Y4YomAg=="
       },
       "System.Collections.Immutable": {
-        "type": "Transitive",
+        "type": "CentralTransitive",
+        "requested": "[9.0.0, )",
         "resolved": "9.0.0",
         "contentHash": "QhkXUl2gNrQtvPmtBTQHb0YsUrDiDQ2QS09YbtTTiSjGcf7NBqtYbrG/BE06zcBPCKEwQGzIv13IVdXNOSub2w==",
         "dependencies": {
@@ -115,7 +126,8 @@
         }
       },
       "System.Memory": {
-        "type": "Transitive",
+        "type": "CentralTransitive",
+        "requested": "[4.5.5, )",
         "resolved": "4.5.5",
         "contentHash": "XIWiDvKPXaTveaB7HVganDlOCRoj03l+jrwNvcge/t8vhGYKvqV+dMv6G4SAX2NoNmN0wZfVPTAlFwZcZvVOUw==",
         "dependencies": {
@@ -125,12 +137,14 @@
         }
       },
       "System.Numerics.Vectors": {
-        "type": "Transitive",
+        "type": "CentralTransitive",
+        "requested": "[4.5.0, )",
         "resolved": "4.5.0",
         "contentHash": "QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ=="
       },
       "System.Reflection.Metadata": {
-        "type": "Transitive",
+        "type": "CentralTransitive",
+        "requested": "[9.0.0, )",
         "resolved": "9.0.0",
         "contentHash": "ANiqLu3DxW9kol/hMmTWbt3414t9ftdIuiIU7j80okq2YzAueo120M442xk1kDJWtmZTqWQn7wHDvMRipVOEOQ==",
         "dependencies": {
@@ -139,12 +153,14 @@
         }
       },
       "System.Runtime.CompilerServices.Unsafe": {
-        "type": "Transitive",
+        "type": "CentralTransitive",
+        "requested": "[6.1.2, )",
         "resolved": "6.1.2",
         "contentHash": "2hBr6zdbIBTDE3EhK7NSVNdX58uTK6iHW/P/Axmm9sl1xoGSLqDvMtpecn226TNwHByFokYwJmt/aQQNlO5CRw=="
       },
       "System.Text.Encoding.CodePages": {
-        "type": "Transitive",
+        "type": "CentralTransitive",
+        "requested": "[7.0.0, )",
         "resolved": "7.0.0",
         "contentHash": "LSyCblMpvOe0N3E+8e0skHcrIhgV2huaNcjUUEa8hRtgEAm36aGkRoC8Jxlb6Ra6GSfF29ftduPNywin8XolzQ==",
         "dependencies": {
@@ -153,18 +169,13 @@
         }
       },
       "System.Threading.Tasks.Extensions": {
-        "type": "Transitive",
+        "type": "CentralTransitive",
+        "requested": "[4.6.3, )",
         "resolved": "4.6.3",
         "contentHash": "7sCiwilJLYbTZELaKnc7RecBBXWXA+xMLQWZKWawBxYjp6DBlSE3v9/UcvKBvr1vv2tTOhipiogM8rRmxlhrVA==",
         "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "6.1.2"
         }
-      },
-      "Microsoft.CodeAnalysis.Analyzers": {
-        "type": "CentralTransitive",
-        "requested": "[4.14.0, )",
-        "resolved": "4.14.0",
-        "contentHash": "fCj+MzjJxN/4iYAz7JPLONGKeTomaZNzx4UgGA0AerTrx4Ou6Rw2J5YF4V51vWW+aSQSCv1nnAkCZUw5Z9+3zw=="
       }
     }
   }
