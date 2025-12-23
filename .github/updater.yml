@@ -30,6 +30,9 @@ updates:
         patterns:
           - Verify
           - Verify.*
+      nuget:
+        patterns:
+          - NuGet.*
     ignore:
       - dependency-name: "Microsoft.*"
         update-types: ["version-update:semver-major"]
