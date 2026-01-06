@@ -19,7 +19,7 @@
   <!-- Test infrastructure -->
   <ItemGroup>
     <PackageVersion Include="H.Generators.Tests.Extensions" Version="1.24.2" />
-    <PackageVersion Include="Microsoft.Testing.Extensions.CodeCoverage" Version="18.1.0" />
+    <PackageVersion Include="Microsoft.Testing.Extensions.CodeCoverage" Version="18.3.1" />
     <PackageVersion Include="Microsoft.Testing.Extensions.TrxReport" Version="2.0.2" />
     <PackageVersion Include="System.ComponentModel.Annotations" Version="5.0.0" />
     <PackageVersion Include="Verify.SourceGenerators" Version="2.5.0" />
