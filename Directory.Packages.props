@@ -9,7 +9,7 @@
     <PackageVersion Include="GitReader" Version="1.16.0" />
     <PackageVersion Include="GitReader.Core" Version="1.16.0" />
     <PackageVersion Include="H.Generators.Extensions" Version="1.24.2" />
-    <PackageVersion Include="Microsoft.Bcl.TimeProvider" Version="10.0.1" />
+    <PackageVersion Include="Microsoft.Bcl.TimeProvider" Version="10.0.2" />
     <PackageVersion Include="Microsoft.CodeAnalysis.Analyzers" Version="4.14.0" />
     <PackageVersion Include="Microsoft.CodeAnalysis.CSharp" Version="4.14.0" />
     <PackageVersion Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.14.0" />
@@ -39,7 +39,7 @@
 
   <!-- Framework-specific packages for net10.0 -->
   <ItemGroup Condition="'$(TargetFramework)' == 'net10.0'">
-    <PackageVersion Include="Microsoft.Extensions.TimeProvider.Testing" Version="10.1.0" />
+    <PackageVersion Include="Microsoft.Extensions.TimeProvider.Testing" Version="10.2.0" />
   </ItemGroup>
 
   <!-- Transitive dependencies - Framework-independent -->
@@ -50,13 +50,13 @@
     <PackageVersion Include="EmptyFiles" Version="8.17.1" />
     <PackageVersion Include="Humanizer.Core" Version="3.0.1" />
     <PackageVersion Include="Microsoft.ApplicationInsights" Version="2.23.0" />
-    <PackageVersion Include="Microsoft.Bcl.AsyncInterfaces" Version="10.0.1" />
+    <PackageVersion Include="Microsoft.Bcl.AsyncInterfaces" Version="10.0.2" />
     <PackageVersion Include="Microsoft.CodeAnalysis.Analyzer.Testing" Version="1.1.3" />
     <PackageVersion Include="Microsoft.CodeAnalysis.CSharp.SourceGenerators.Testing" Version="1.1.3" />
     <PackageVersion Include="Microsoft.CodeAnalysis.Common" Version="4.14.0" />
     <PackageVersion Include="Microsoft.CodeAnalysis.SourceGenerators.Testing" Version="1.1.3" />
     <PackageVersion Include="Microsoft.CodeAnalysis.Workspaces.Common" Version="4.14.0" />
-    <PackageVersion Include="Microsoft.DiaSymReader" Version="2.0.0" />
+    <PackageVersion Include="Microsoft.DiaSymReader" Version="2.2.2" />
     <PackageVersion Include="Microsoft.Extensions.DependencyModel" Version="6.0.2" />
     <PackageVersion Include="Microsoft.NETCore.Platforms" Version="1.1.2" />
     <PackageVersion Include="Microsoft.Testing.Extensions.Telemetry" Version="2.0.2" />
@@ -77,18 +77,18 @@
     <PackageVersion Include="NuGet.Versioning" Version="7.0.1" />
     <PackageVersion Include="SimpleInfoName" Version="3.2.0" />
     <PackageVersion Include="System.Buffers" Version="4.6.1" />
-    <PackageVersion Include="System.Collections.Immutable" Version="9.0.11" />
+    <PackageVersion Include="System.Collections.Immutable" Version="9.0.12" />
     <PackageVersion Include="System.ComponentModel.Composition" Version="4.7.0" />
-    <PackageVersion Include="System.Composition" Version="9.0.11" />
-    <PackageVersion Include="System.Composition.AttributedModel" Version="9.0.11" />
-    <PackageVersion Include="System.Composition.Convention" Version="9.0.11" />
-    <PackageVersion Include="System.Composition.Hosting" Version="9.0.11" />
-    <PackageVersion Include="System.Composition.Runtime" Version="9.0.11" />
-    <PackageVersion Include="System.Composition.TypedParts" Version="9.0.11" />
-    <PackageVersion Include="System.IO.Pipelines" Version="9.0.11" />
+    <PackageVersion Include="System.Composition" Version="9.0.12" />
+    <PackageVersion Include="System.Composition.AttributedModel" Version="9.0.12" />
+    <PackageVersion Include="System.Composition.Convention" Version="9.0.12" />
+    <PackageVersion Include="System.Composition.Hosting" Version="9.0.12" />
+    <PackageVersion Include="System.Composition.Runtime" Version="9.0.12" />
+    <PackageVersion Include="System.Composition.TypedParts" Version="9.0.12" />
+    <PackageVersion Include="System.IO.Pipelines" Version="9.0.12" />
     <PackageVersion Include="System.Memory" Version="4.6.3" />
     <PackageVersion Include="System.Numerics.Vectors" Version="4.6.1" />
-    <PackageVersion Include="System.Reflection.Metadata" Version="9.0.11" />
+    <PackageVersion Include="System.Reflection.Metadata" Version="9.0.12" />
     <PackageVersion Include="System.Runtime.CompilerServices.Unsafe" Version="6.1.2" />
     <PackageVersion Include="System.Security.Cryptography.Cng" Version="5.0.0" />
     <PackageVersion Include="System.Security.Cryptography.Pkcs" Version="5.0.1" />
