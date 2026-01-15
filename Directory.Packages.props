@@ -98,11 +98,11 @@
     <PackageVersion Include="System.Threading.Tasks.Extensions" Version="4.6.3" />
     <PackageVersion Include="Verify" Version="31.9.0" />
     <PackageVersion Include="xunit.analyzers" Version="1.26.0" />
-    <PackageVersion Include="xunit.v3.assert" Version="3.2.1" />
-    <PackageVersion Include="xunit.v3.common" Version="3.2.1" />
+    <PackageVersion Include="xunit.v3.assert" Version="3.2.2" />
+    <PackageVersion Include="xunit.v3.common" Version="3.2.2" />
     <PackageVersion Include="xunit.v3.core.mtp-v2" Version="3.2.1" />
-    <PackageVersion Include="xunit.v3.extensibility.core" Version="3.2.1" />
-    <PackageVersion Include="xunit.v3.runner.common" Version="3.2.1" />
+    <PackageVersion Include="xunit.v3.extensibility.core" Version="3.2.2" />
+    <PackageVersion Include="xunit.v3.runner.common" Version="3.2.2" />
     <PackageVersion Include="xunit.v3.runner.inproc.console" Version="3.2.1" />
   </ItemGroup>
 </Project>
