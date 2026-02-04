@@ -20,7 +20,7 @@
   <ItemGroup>
     <PackageVersion Include="H.Generators.Tests.Extensions" Version="1.24.2" />
     <PackageVersion Include="Microsoft.Testing.Extensions.CodeCoverage" Version="18.3.2" />
-    <PackageVersion Include="Microsoft.Testing.Extensions.TrxReport" Version="2.0.2" />
+    <PackageVersion Include="Microsoft.Testing.Extensions.TrxReport" Version="2.1.0" />
     <PackageVersion Include="System.ComponentModel.Annotations" Version="5.0.0" />
     <PackageVersion Include="Verify.SourceGenerators" Version="2.5.0" />
     <PackageVersion Include="Verify.XUnitV3" Version="31.9.0" />
@@ -67,10 +67,10 @@
     <PackageVersion Include="Microsoft.DiaSymReader" Version="2.2.2" />
     <PackageVersion Include="Microsoft.Extensions.DependencyModel" Version="6.0.2" />
     <PackageVersion Include="Microsoft.NETCore.Platforms" Version="1.1.2" />
-    <PackageVersion Include="Microsoft.Testing.Extensions.Telemetry" Version="2.0.2" />
-    <PackageVersion Include="Microsoft.Testing.Extensions.TrxReport.Abstractions" Version="2.0.2" />
-    <PackageVersion Include="Microsoft.Testing.Platform" Version="2.0.2" />
-    <PackageVersion Include="Microsoft.Testing.Platform.MSBuild" Version="2.0.2" />
+    <PackageVersion Include="Microsoft.Testing.Extensions.Telemetry" Version="2.1.0" />
+    <PackageVersion Include="Microsoft.Testing.Extensions.TrxReport.Abstractions" Version="2.1.0" />
+    <PackageVersion Include="Microsoft.Testing.Platform" Version="2.1.0" />
+    <PackageVersion Include="Microsoft.Testing.Platform.MSBuild" Version="2.1.0" />
     <PackageVersion Include="Microsoft.VisualStudio.Composition" Version="16.9.20" />
     <PackageVersion Include="Microsoft.VisualStudio.Composition.NetFxAttributes" Version="16.9.20" />
     <PackageVersion Include="Microsoft.VisualStudio.Validation" Version="15.5.31" />
