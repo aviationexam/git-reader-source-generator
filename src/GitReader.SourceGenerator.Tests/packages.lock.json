@@ -34,9 +34,9 @@
       },
       "Microsoft.Bcl.TimeProvider": {
         "type": "Direct",
-        "requested": "[10.0.6, )",
-        "resolved": "10.0.6",
-        "contentHash": "MGGiMqKB+WBSX/AOJC0FIIDw1xPmbRM1Otq9e5tZk2nCvTm75FlYhXSzeutB7T4VHUJn9GlW0yNwxSfVI0Q4Yg=="
+        "requested": "[10.0.7, )",
+        "resolved": "10.0.7",
+        "contentHash": "7FwsiY3qzhs4/0gCrzfEyo+sSNUOiWbZil6NiZ6UXqD+EsoXOLpioBLRQLZVisdDutY2WlPkJlPLA3OEKJ+zvA=="
       },
       "Microsoft.CodeAnalysis.Analyzers": {
         "type": "Direct",
@@ -180,9 +180,9 @@
       },
       "Microsoft.Bcl.AsyncInterfaces": {
         "type": "CentralTransitive",
-        "requested": "[10.0.6, )",
-        "resolved": "10.0.6",
-        "contentHash": "Os4eB/5WwgiBoFpOmQjEpo8sbFzbWrONvfqK52E7pl4YQoIWFlyeWdOxxxPMHNYFCDD3biT5NzDzNZCo/6kDLw=="
+        "requested": "[10.0.7, )",
+        "resolved": "10.0.7",
+        "contentHash": "g0Xp9A+B8jCf5pNIIhFOQXPJkte3D87shfTLY+ylwfSh22U5oQH6tvvmcUuqJvt/wtwKk0WdNp2OGEczHJlJdg=="
       },
       "Microsoft.CodeAnalysis.Analyzer.Testing": {
         "type": "CentralTransitive",
@@ -253,9 +253,9 @@
       },
       "Microsoft.DiaSymReader": {
         "type": "CentralTransitive",
-        "requested": "[2.2.6, )",
-        "resolved": "2.2.6",
-        "contentHash": "UitZ43WYJQYmcuScLEDTR95EGulBwk2R4N2zLBhaka8frXGVioa6Bkcbc5Fib8UkHIdrnN1lyzOublenrfpgxA=="
+        "requested": "[2.2.7, )",
+        "resolved": "2.2.7",
+        "contentHash": "utC3BMKbcVuBDeC3Ym1+Mp4HDtfK8YnGK6cQx6bpCT5Anw/mK1MP7ghhEulyYX7enInIaCLBsWDE1C9X6ndlQg=="
       },
       "Microsoft.Extensions.DependencyModel": {
         "type": "CentralTransitive",
@@ -585,9 +585,9 @@
       },
       "Microsoft.Bcl.TimeProvider": {
         "type": "Direct",
-        "requested": "[10.0.6, )",
-        "resolved": "10.0.6",
-        "contentHash": "MGGiMqKB+WBSX/AOJC0FIIDw1xPmbRM1Otq9e5tZk2nCvTm75FlYhXSzeutB7T4VHUJn9GlW0yNwxSfVI0Q4Yg=="
+        "requested": "[10.0.7, )",
+        "resolved": "10.0.7",
+        "contentHash": "7FwsiY3qzhs4/0gCrzfEyo+sSNUOiWbZil6NiZ6UXqD+EsoXOLpioBLRQLZVisdDutY2WlPkJlPLA3OEKJ+zvA=="
       },
       "Microsoft.CodeAnalysis.Analyzers": {
         "type": "Direct",
@@ -734,9 +734,9 @@
       },
       "Microsoft.Bcl.AsyncInterfaces": {
         "type": "CentralTransitive",
-        "requested": "[10.0.6, )",
-        "resolved": "10.0.6",
-        "contentHash": "Os4eB/5WwgiBoFpOmQjEpo8sbFzbWrONvfqK52E7pl4YQoIWFlyeWdOxxxPMHNYFCDD3biT5NzDzNZCo/6kDLw=="
+        "requested": "[10.0.7, )",
+        "resolved": "10.0.7",
+        "contentHash": "g0Xp9A+B8jCf5pNIIhFOQXPJkte3D87shfTLY+ylwfSh22U5oQH6tvvmcUuqJvt/wtwKk0WdNp2OGEczHJlJdg=="
       },
       "Microsoft.CodeAnalysis.Analyzer.Testing": {
         "type": "CentralTransitive",
@@ -814,9 +814,9 @@
       },
       "Microsoft.DiaSymReader": {
         "type": "CentralTransitive",
-        "requested": "[2.2.6, )",
-        "resolved": "2.2.6",
-        "contentHash": "UitZ43WYJQYmcuScLEDTR95EGulBwk2R4N2zLBhaka8frXGVioa6Bkcbc5Fib8UkHIdrnN1lyzOublenrfpgxA=="
+        "requested": "[2.2.7, )",
+        "resolved": "2.2.7",
+        "contentHash": "utC3BMKbcVuBDeC3Ym1+Mp4HDtfK8YnGK6cQx6bpCT5Anw/mK1MP7ghhEulyYX7enInIaCLBsWDE1C9X6ndlQg=="
       },
       "Microsoft.Extensions.DependencyModel": {
         "type": "CentralTransitive",
@@ -1177,9 +1177,9 @@
       },
       "Microsoft.Bcl.TimeProvider": {
         "type": "Direct",
-        "requested": "[10.0.6, )",
-        "resolved": "10.0.6",
-        "contentHash": "MGGiMqKB+WBSX/AOJC0FIIDw1xPmbRM1Otq9e5tZk2nCvTm75FlYhXSzeutB7T4VHUJn9GlW0yNwxSfVI0Q4Yg=="
+        "requested": "[10.0.7, )",
+        "resolved": "10.0.7",
+        "contentHash": "7FwsiY3qzhs4/0gCrzfEyo+sSNUOiWbZil6NiZ6UXqD+EsoXOLpioBLRQLZVisdDutY2WlPkJlPLA3OEKJ+zvA=="
       },
       "Microsoft.CodeAnalysis.Analyzers": {
         "type": "Direct",
@@ -1323,9 +1323,9 @@
       },
       "Microsoft.Bcl.AsyncInterfaces": {
         "type": "CentralTransitive",
-        "requested": "[10.0.6, )",
-        "resolved": "10.0.6",
-        "contentHash": "Os4eB/5WwgiBoFpOmQjEpo8sbFzbWrONvfqK52E7pl4YQoIWFlyeWdOxxxPMHNYFCDD3biT5NzDzNZCo/6kDLw=="
+        "requested": "[10.0.7, )",
+        "resolved": "10.0.7",
+        "contentHash": "g0Xp9A+B8jCf5pNIIhFOQXPJkte3D87shfTLY+ylwfSh22U5oQH6tvvmcUuqJvt/wtwKk0WdNp2OGEczHJlJdg=="
       },
       "Microsoft.CodeAnalysis.Analyzer.Testing": {
         "type": "CentralTransitive",
@@ -1396,9 +1396,9 @@
       },
       "Microsoft.DiaSymReader": {
         "type": "CentralTransitive",
-        "requested": "[2.2.6, )",
-        "resolved": "2.2.6",
-        "contentHash": "UitZ43WYJQYmcuScLEDTR95EGulBwk2R4N2zLBhaka8frXGVioa6Bkcbc5Fib8UkHIdrnN1lyzOublenrfpgxA=="
+        "requested": "[2.2.7, )",
+        "resolved": "2.2.7",
+        "contentHash": "utC3BMKbcVuBDeC3Ym1+Mp4HDtfK8YnGK6cQx6bpCT5Anw/mK1MP7ghhEulyYX7enInIaCLBsWDE1C9X6ndlQg=="
       },
       "Microsoft.Extensions.DependencyModel": {
         "type": "CentralTransitive",
