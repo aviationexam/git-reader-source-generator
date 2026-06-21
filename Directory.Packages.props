@@ -6,7 +6,7 @@
 
   <!-- Source generators and analyzers -->
   <ItemGroup>
-    <PackageVersion Include="GitReader" Version="1.17.0" />
+    <PackageVersion Include="GitReader" Version="1.18.0" />
     <PackageVersion Include="GitReader.Core" Version="1.16.0" />
     <PackageVersion Include="H.Generators.Extensions" Version="1.24.2" />
     <PackageVersion Include="Microsoft.Bcl.TimeProvider" Version="10.0.9" />
