@@ -471,15 +471,15 @@
       },
       "System.Security.Cryptography.Pkcs": {
         "type": "CentralTransitive",
-        "requested": "[9.0.6, )",
-        "resolved": "9.0.6",
-        "contentHash": "Gny8p2mX0jc5rjh+PA4Gx5GG66sj2C+e+ro7+j/3IsKT/bmQ84tGRV+XKaG+5/CTCdwkSSKDWEQ1rJd0J5jE0Q=="
+        "requested": "[9.0.19, )",
+        "resolved": "9.0.19",
+        "contentHash": "/T5xGxh3IT465U8rLzDvZDolVlLGqUqTunZNHSvkkRBkflblFBzvJO4qTzNwjCApygv81KIec8epg46X0h+yIw=="
       },
       "System.Security.Cryptography.ProtectedData": {
         "type": "CentralTransitive",
-        "requested": "[9.0.6, )",
-        "resolved": "9.0.6",
-        "contentHash": "yErfw/3pZkJE/VKza/Cm5idTpIKOy/vsmVi59Ta5SruPVtubzxb8CtnE8tyUpzs5pr0Y28GUFfSVzAhCLN3F/Q=="
+        "requested": "[9.0.19, )",
+        "resolved": "9.0.19",
+        "contentHash": "wE7uoXg9sKO/c//Q76lx6u/jLqWWYy1XF0kJIwXxcDSqx3yIYdr7EBnRVoyWB0dQK8VtgwzfquaMRLZmu7SAaw=="
       },
       "Verify": {
         "type": "CentralTransitive",
@@ -687,10 +687,10 @@
       },
       "Microsoft.Bcl.Cryptography": {
         "type": "Transitive",
-        "resolved": "9.0.6",
-        "contentHash": "QY+zvyOMPoa883T3JB+M9sQvYBfGHidptsVhD9pWn52fS3+xaUSIaf5Fcw8WIoyP6cx3K5vHMcvOdDz7NehZOA==",
+        "resolved": "9.0.19",
+        "contentHash": "SpBVswC0Gr/TBZohcjY9GB+YxulBkLLXztpaVjXW4syXM8I3mHHhGQmcL5qNFB8D1JHUKWWADqLa1//SJ7HZkw==",
         "dependencies": {
-          "System.Formats.Asn1": "9.0.6"
+          "System.Formats.Asn1": "9.0.19"
         }
       },
       "Microsoft.VisualStudio.Composition.Analyzers": {
@@ -700,8 +700,8 @@
       },
       "System.Formats.Asn1": {
         "type": "Transitive",
-        "resolved": "9.0.6",
-        "contentHash": "8LbKs3WVqyDSszFZJA9Uxg9z+C6WbPbFTSPm/HjFEsWx49XWs0ueqaAKPWncvFJ8yl4H4C/RTnUMhCKoXkddkg=="
+        "resolved": "9.0.19",
+        "contentHash": "1PCEuJNu4Zn/MFqFN5psqYHjFdkk0cC47NagWhqWNCiMAv3jWwYoFnjBIb7Etbg7nnHG3llEaoCnufrIs+kWXA=="
       },
       "System.Security.AccessControl": {
         "type": "Transitive",
@@ -1073,19 +1073,19 @@
       },
       "System.Security.Cryptography.Pkcs": {
         "type": "CentralTransitive",
-        "requested": "[9.0.6, )",
-        "resolved": "9.0.6",
-        "contentHash": "Gny8p2mX0jc5rjh+PA4Gx5GG66sj2C+e+ro7+j/3IsKT/bmQ84tGRV+XKaG+5/CTCdwkSSKDWEQ1rJd0J5jE0Q==",
+        "requested": "[9.0.19, )",
+        "resolved": "9.0.19",
+        "contentHash": "/T5xGxh3IT465U8rLzDvZDolVlLGqUqTunZNHSvkkRBkflblFBzvJO4qTzNwjCApygv81KIec8epg46X0h+yIw==",
         "dependencies": {
-          "Microsoft.Bcl.Cryptography": "9.0.6",
-          "System.Formats.Asn1": "9.0.6"
+          "Microsoft.Bcl.Cryptography": "9.0.19",
+          "System.Formats.Asn1": "9.0.19"
         }
       },
       "System.Security.Cryptography.ProtectedData": {
         "type": "CentralTransitive",
-        "requested": "[9.0.6, )",
-        "resolved": "9.0.6",
-        "contentHash": "yErfw/3pZkJE/VKza/Cm5idTpIKOy/vsmVi59Ta5SruPVtubzxb8CtnE8tyUpzs5pr0Y28GUFfSVzAhCLN3F/Q=="
+        "requested": "[9.0.19, )",
+        "resolved": "9.0.19",
+        "contentHash": "wE7uoXg9sKO/c//Q76lx6u/jLqWWYy1XF0kJIwXxcDSqx3yIYdr7EBnRVoyWB0dQK8VtgwzfquaMRLZmu7SAaw=="
       },
       "Verify": {
         "type": "CentralTransitive",
@@ -1634,15 +1634,15 @@
       },
       "System.Security.Cryptography.Pkcs": {
         "type": "CentralTransitive",
-        "requested": "[9.0.6, )",
-        "resolved": "9.0.6",
-        "contentHash": "Gny8p2mX0jc5rjh+PA4Gx5GG66sj2C+e+ro7+j/3IsKT/bmQ84tGRV+XKaG+5/CTCdwkSSKDWEQ1rJd0J5jE0Q=="
+        "requested": "[9.0.19, )",
+        "resolved": "9.0.19",
+        "contentHash": "/T5xGxh3IT465U8rLzDvZDolVlLGqUqTunZNHSvkkRBkflblFBzvJO4qTzNwjCApygv81KIec8epg46X0h+yIw=="
       },
       "System.Security.Cryptography.ProtectedData": {
         "type": "CentralTransitive",
-        "requested": "[9.0.6, )",
-        "resolved": "9.0.6",
-        "contentHash": "yErfw/3pZkJE/VKza/Cm5idTpIKOy/vsmVi59Ta5SruPVtubzxb8CtnE8tyUpzs5pr0Y28GUFfSVzAhCLN3F/Q=="
+        "requested": "[9.0.19, )",
+        "resolved": "9.0.19",
+        "contentHash": "wE7uoXg9sKO/c//Q76lx6u/jLqWWYy1XF0kJIwXxcDSqx3yIYdr7EBnRVoyWB0dQK8VtgwzfquaMRLZmu7SAaw=="
       },
       "Verify": {
         "type": "CentralTransitive",
