@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using VerifyTests;
 using VerifyXunit;
 
 namespace GitReader.SourceGenerator.Tests;
@@ -36,7 +37,7 @@ public static class TestHelper
         source
     );
 
-    public static Task Verify<TIncrementalGenerator>(
+    public static SettingsTask Verify<TIncrementalGenerator>(
         TIncrementalGenerator generator,
         DictionaryAnalyzerConfigOptionsProvider analyzerConfigOptionsProvider,
         [StringSyntax("csharp")] params string[] source
