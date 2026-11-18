@@ -33,19 +33,22 @@ public class GitReaderSnapshotTests
             .UseTextForParameters("Second");
     }
 
-    private static SettingsTask VerifyCached(string repository, string targetNamespace, bool aggressive) =>
-        TestHelper.Verify(
-            new GitInfoGenerator(new FakeTimeProvider(
-                new DateTimeOffset(2023, 11, 18, 0, 1, 2, TimeSpan.Zero)
-            )),
-            new DictionaryAnalyzerConfigOptionsProvider(globalOptions: new Dictionary<string, string>
-            {
-                ["build_property.GitInfo_RootDirectory"] = repository,
-                ["build_property.GitInfo_Namespace"] = targetNamespace,
-                ["build_property.GitInfo_UseCache"] = "true",
-                ["build_property.GitInfo_UseAggressiveCache"] = aggressive ? "true" : "false",
-            })
-        );
+    private static SettingsTask VerifyCached(
+        string repository,
+        string targetNamespace,
+        bool aggressive
+    ) => TestHelper.Verify(
+        new GitInfoGenerator(new FakeTimeProvider(
+            new DateTimeOffset(2023, 11, 18, 0, 1, 2, TimeSpan.Zero)
+        )),
+        new DictionaryAnalyzerConfigOptionsProvider(globalOptions: new Dictionary<string, string>
+        {
+            ["build_property.GitInfo_RootDirectory"] = repository,
+            ["build_property.GitInfo_Namespace"] = targetNamespace,
+            ["build_property.GitInfo_UseCache"] = "true",
+            ["build_property.GitInfo_UseAggressiveCache"] = aggressive ? "true" : "false",
+        })
+    );
 
     private sealed class TemporaryRepositories : IDisposable
     {
