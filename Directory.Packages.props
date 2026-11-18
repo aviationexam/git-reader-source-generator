@@ -50,6 +50,11 @@
     <PackageVersion Include="Microsoft.Extensions.TimeProvider.Testing" Version="10.11.0" />
   </ItemGroup>
 
+  <!-- Framework-specific packages for net11.0 -->
+  <ItemGroup Condition="'$(TargetFramework)' == 'net11.0'">
+    <PackageVersion Include="Microsoft.Extensions.TimeProvider.Testing" Version="11.0.0" />
+  </ItemGroup>
+
   <!-- Transitive dependencies - Framework-independent -->
   <ItemGroup>
     <PackageVersion Include="Argon" Version="0.33.0" />
