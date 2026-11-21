@@ -52,7 +52,7 @@
 
   <!-- Framework-specific packages for net11.0 -->
   <ItemGroup Condition="'$(TargetFramework)' == 'net11.0'">
-    <PackageVersion Include="Microsoft.Extensions.TimeProvider.Testing" Version="11.0.0" />
+    <PackageVersion Include="Microsoft.Extensions.TimeProvider.Testing" Version="11.0.1" />
   </ItemGroup>
 
   <!-- Transitive dependencies - Framework-independent -->
